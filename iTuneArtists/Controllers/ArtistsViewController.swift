@@ -34,26 +34,39 @@ extension ArtistsViewController: UITableViewDataSource {
         return cell
     }
 }
-// MARK: - Calling API & Fetching Data
+// MARK: - Calling API & Reloading Table Data
 extension ArtistsViewController {
     func fetchData() {
-        let closure: ((Data?) -> ())  = { data in
-            guard let serverData = data else {
+        APIManager.sharedInstance.getApiData(url: Constants.serverUrl.rawValue) { unwrappedDecodedData in
+            guard let data = unwrappedDecodedData else {
                 print(ServerErrors.invalidServerData.rawValue)
                 return
             }
-            do {
-                let artistsArray = try JSONDecoder().decode(Model.self, from: serverData)
-                print(artistsArray.results)
-                self.artists = artistsArray.results
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    self.activityIndicator.stopAnimating()
-                }
-            } catch {
-                print(ServerErrors.invalidDecode.rawValue)
+            self.artists = data.results
+            // doesn't matter where we write the dispatch queue. it works if its inside closure or outside closure(inside fetchData())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.activityIndicator.stopAnimating()
             }
         }
-        APIManager.sharedInstance.getData(url: Constants.serverUrl.rawValue, closure: closure)
+        // MARK: Shobhakar method
+//        let closure: ((Data?) -> ())  = { data in
+//            guard let serverData = data else {
+//                print(ServerErrors.invalidServerData.rawValue)
+//                return
+//            }
+//            do {
+//                let artistsArray = try JSONDecoder().decode(Model.self, from: serverData)
+//                print(artistsArray.results)
+//                self.artists = artistsArray.results
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                    self.activityIndicator.stopAnimating()
+//                }
+//            } catch {
+//                print(ServerErrors.invalidDecode.rawValue)
+//            }
+//        }
+        // closure is something with which we can send the data. and here in the curly braces, we used the data which was sent with a closure with the API Manager
     }
 }
