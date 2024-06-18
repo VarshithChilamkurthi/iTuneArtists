@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2060A872C20BF1C00B9E3A7 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */; };
+		D2060A8F2C20CADB00B9E3A7 /* iTuneArtistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */; };
 		D2A1B2EF2C1A27760027090F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B2EE2C1A27760027090F /* AppDelegate.swift */; };
 		D2A1B2F12C1A27760027090F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B2F02C1A27760027090F /* SceneDelegate.swift */; };
 		D2A1B2F32C1A27760027090F /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B2F22C1A27760027090F /* ArtistsViewController.swift */; };
@@ -18,9 +20,26 @@
 		D2A1B30C2C1A29EE0027090F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B30B2C1A29EE0027090F /* Constants.swift */; };
 		D2A1B30E2C1A34F60027090F /* ArtistsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B30D2C1A34F60027090F /* ArtistsTableViewCell.swift */; };
 		D2A1B3102C1B5E700027090F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B30F2C1B5E700027090F /* Extensions.swift */; };
+		D2A1B3382C20930A0027090F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B3372C20930A0027090F /* Protocols.swift */; };
+		FDC7CC7706E22259C0799006 /* Pods_iTuneArtists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB699BD031117BF0EB2CC704 /* Pods_iTuneArtists.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D2060A902C20CADB00B9E3A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2A1B2E32C1A27760027090F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2A1B2EA2C1A27760027090F;
+			remoteInfo = iTuneArtists;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		313F3B382D479F79E1AB0F74 /* Pods-iTuneArtists.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTuneArtists.release.xcconfig"; path = "Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists.release.xcconfig"; sourceTree = "<group>"; };
+		B04AD0DFB39FB97B4AF84F4E /* Pods-iTuneArtists.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTuneArtists.debug.xcconfig"; path = "Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists.debug.xcconfig"; sourceTree = "<group>"; };
+		D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
+		D2060A8C2C20CADB00B9E3A7 /* iTuneArtistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTuneArtistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTuneArtistsTests.swift; sourceTree = "<group>"; };
 		D2A1B2EB2C1A27760027090F /* iTuneArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTuneArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A1B2EE2C1A27760027090F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2A1B2F02C1A27760027090F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,24 +53,61 @@
 		D2A1B30B2C1A29EE0027090F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D2A1B30D2C1A34F60027090F /* ArtistsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsTableViewCell.swift; sourceTree = "<group>"; };
 		D2A1B30F2C1B5E700027090F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D2A1B3372C20930A0027090F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		FB699BD031117BF0EB2CC704 /* Pods_iTuneArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTuneArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D2A1B2E82C1A27760027090F /* Frameworks */ = {
+		D2060A892C20CADB00B9E3A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D2A1B2E82C1A27760027090F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDC7CC7706E22259C0799006 /* Pods_iTuneArtists.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4AB6BC94023F6D81FD62FBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB699BD031117BF0EB2CC704 /* Pods_iTuneArtists.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2060A852C20BEDA00B9E3A7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D2060A8D2C20CADB00B9E3A7 /* iTuneArtistsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */,
+			);
+			path = iTuneArtistsTests;
+			sourceTree = "<group>";
+		};
 		D2A1B2E22C1A27760027090F = {
 			isa = PBXGroup;
 			children = (
 				D2A1B2ED2C1A27760027090F /* iTuneArtists */,
+				D2060A8D2C20CADB00B9E3A7 /* iTuneArtistsTests */,
 				D2A1B2EC2C1A27760027090F /* Products */,
+				DC74D6557998C2B37718BB87 /* Pods */,
+				A4AB6BC94023F6D81FD62FBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				D2A1B2EB2C1A27760027090F /* iTuneArtists.app */,
+				D2060A8C2C20CADB00B9E3A7 /* iTuneArtistsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,7 +125,7 @@
 			children = (
 				D2A1B3022C1A27AE0027090F /* Models */,
 				D2A1B3032C1A27B50027090F /* Views */,
-				D2A1B3042C1A27BD0027090F /* Controllers */,
+				D2060A852C20BEDA00B9E3A7 /* ViewModel */,
 				D2A1B3072C1A28DC0027090F /* Network */,
 				D2A1B30A2C1A29B60027090F /* Common */,
 				D2A1B2EE2C1A27760027090F /* AppDelegate.swift */,
@@ -93,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				D2A1B30D2C1A34F60027090F /* ArtistsTableViewCell.swift */,
+				D2A1B3042C1A27BD0027090F /* Controllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,20 +176,50 @@
 			children = (
 				D2A1B30B2C1A29EE0027090F /* Constants.swift */,
 				D2A1B30F2C1B5E700027090F /* Extensions.swift */,
+				D2A1B3372C20930A0027090F /* Protocols.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		DC74D6557998C2B37718BB87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B04AD0DFB39FB97B4AF84F4E /* Pods-iTuneArtists.debug.xcconfig */,
+				313F3B382D479F79E1AB0F74 /* Pods-iTuneArtists.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D2060A8B2C20CADB00B9E3A7 /* iTuneArtistsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2060A922C20CADB00B9E3A7 /* Build configuration list for PBXNativeTarget "iTuneArtistsTests" */;
+			buildPhases = (
+				D2060A882C20CADB00B9E3A7 /* Sources */,
+				D2060A892C20CADB00B9E3A7 /* Frameworks */,
+				D2060A8A2C20CADB00B9E3A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2060A912C20CADB00B9E3A7 /* PBXTargetDependency */,
+			);
+			name = iTuneArtistsTests;
+			productName = iTuneArtistsTests;
+			productReference = D2060A8C2C20CADB00B9E3A7 /* iTuneArtistsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D2A1B2EA2C1A27760027090F /* iTuneArtists */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A1B2FF2C1A27780027090F /* Build configuration list for PBXNativeTarget "iTuneArtists" */;
 			buildPhases = (
+				31064BE231D0B429AEF4E8B2 /* [CP] Check Pods Manifest.lock */,
 				D2A1B2E72C1A27760027090F /* Sources */,
 				D2A1B2E82C1A27760027090F /* Frameworks */,
 				D2A1B2E92C1A27760027090F /* Resources */,
+				48272FED96483502BF12F0F1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +240,10 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					D2060A8B2C20CADB00B9E3A7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = D2A1B2EA2C1A27760027090F;
+					};
 					D2A1B2EA2C1A27760027090F = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -171,11 +263,19 @@
 			projectRoot = "";
 			targets = (
 				D2A1B2EA2C1A27760027090F /* iTuneArtists */,
+				D2060A8B2C20CADB00B9E3A7 /* iTuneArtistsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D2060A8A2C20CADB00B9E3A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2A1B2E92C1A27760027090F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,14 +288,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31064BE231D0B429AEF4E8B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iTuneArtists-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48272FED96483502BF12F0F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		D2060A882C20CADB00B9E3A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2060A8F2C20CADB00B9E3A7 /* iTuneArtistsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2A1B2E72C1A27760027090F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2060A872C20BF1C00B9E3A7 /* ArtistsViewModel.swift in Sources */,
 				D2A1B2F32C1A27760027090F /* ArtistsViewController.swift in Sources */,
 				D2A1B3062C1A28160027090F /* ItunesData.swift in Sources */,
 				D2A1B2EF2C1A27760027090F /* AppDelegate.swift in Sources */,
+				D2A1B3382C20930A0027090F /* Protocols.swift in Sources */,
 				D2A1B3102C1B5E700027090F /* Extensions.swift in Sources */,
 				D2A1B30E2C1A34F60027090F /* ArtistsTableViewCell.swift in Sources */,
 				D2A1B3092C1A29070027090F /* ApiManager.swift in Sources */,
@@ -205,6 +357,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2060A912C20CADB00B9E3A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2A1B2EA2C1A27760027090F /* iTuneArtists */;
+			targetProxy = D2060A902C20CADB00B9E3A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D2A1B2F42C1A27760027090F /* Main.storyboard */ = {
@@ -226,6 +386,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D2060A932C20CADB00B9E3A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varshith.development.appname.iTuneArtistsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTuneArtists.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iTuneArtists";
+			};
+			name = Debug;
+		};
+		D2060A942C20CADB00B9E3A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varshith.development.appname.iTuneArtistsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iTuneArtists.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iTuneArtists";
+			};
+			name = Release;
+		};
 		D2A1B2FD2C1A27780027090F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -263,7 +459,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -326,7 +522,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -347,13 +543,15 @@
 		};
 		D2A1B3002C1A27780027090F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B04AD0DFB39FB97B4AF84F4E /* Pods-iTuneArtists.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2.0;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTuneArtists/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iTunesArtistsMVVC;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -363,8 +561,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.varshith.development.appname.iTuneArtists;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varshith.development.mvvc.iTuneArtists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -374,13 +572,15 @@
 		};
 		D2A1B3012C1A27780027090F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 313F3B382D479F79E1AB0F74 /* Pods-iTuneArtists.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0;
+				CURRENT_PROJECT_VERSION = 2.0;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iTuneArtists/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = iTunesArtistsMVVC;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -390,8 +590,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.varshith.development.appname.iTuneArtists;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.varshith.development.mvvc.iTuneArtists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -402,6 +602,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D2060A922C20CADB00B9E3A7 /* Build configuration list for PBXNativeTarget "iTuneArtistsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2060A932C20CADB00B9E3A7 /* Debug */,
+				D2060A942C20CADB00B9E3A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2A1B2E62C1A27760027090F /* Build configuration list for PBXProject "iTuneArtists" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

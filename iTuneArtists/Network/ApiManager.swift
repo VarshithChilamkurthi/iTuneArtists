@@ -9,6 +9,7 @@ import Foundation
 
 class APIManager {
     static let sharedInstance = APIManager()
+    private init() {}
     var decodedData: Model?
     // escaping is like an optional
     //using the closure to send data to ArtistsViewController
@@ -28,20 +29,9 @@ class APIManager {
                     return
                 }
                 self.decodedData = decodedData
-//                print(decodedData.results)
             }
             guard let unwrappedDecodedData = self.decodedData else { return }
             closure(unwrappedDecodedData)
-//            closure(data)
-//            print(data)
-//            do{
-//                if let unwrappedData = data {
-//                    let decodedData = try JSONDecoder().decode(Model.self, from: unwrappedData)
-//                    print(decodedData.results)
-//                }
-//            } catch {
-//                print("invalid data")
-//            }
         }.resume()
     }
     
@@ -54,7 +44,6 @@ class APIManager {
                 }
             }.resume()
         }
-//        return imageData
     }
     
     func decodeData(data: Data) -> Model? {
@@ -62,7 +51,7 @@ class APIManager {
         do {
             decodedData = try JSONDecoder().decode(Model.self, from: data)
         } catch {
-            print("invalid data")
+            print(ServerErrors.invalidServerData.rawValue)
         }
         return decodedData
     }
