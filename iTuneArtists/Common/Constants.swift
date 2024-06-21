@@ -10,7 +10,7 @@ import Foundation
 var artists: [Artists] = []
 
 enum Constants: String {
-    case serverUrl = "https://itunes.apple.com/search?term=a"
+    case serverUrl = "https://itunes.apple.com/search?term="
 }
 
 enum ServerErrors: String {

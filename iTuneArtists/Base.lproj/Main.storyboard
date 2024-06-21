@@ -17,8 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-hu-vdz">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="w6o-hK-r1j"/>
+                                </connections>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1XZ-xt-ToL">
-                                <rect key="frame" x="0.0" y="103" width="393" height="750"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="693"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArtistsTableViewCell" rowHeight="80" id="eRq-nr-U6V" customClass="ArtistsTableViewCell" customModule="iTuneArtists" customModuleProvider="target">
@@ -90,17 +97,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1XZ-xt-ToL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="11u-I6-YGn"/>
                             <constraint firstItem="sd9-wO-hb4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="57I-l2-sIE"/>
-                            <constraint firstItem="1XZ-xt-ToL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FGj-fj-4xh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1XZ-xt-ToL" secondAttribute="trailing" id="eUo-bL-1HJ"/>
+                            <constraint firstItem="Y2A-hu-vdz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FBb-i2-2zK"/>
+                            <constraint firstItem="Y2A-hu-vdz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J8d-Il-tMT"/>
+                            <constraint firstItem="1XZ-xt-ToL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VcR-x6-iFJ"/>
+                            <constraint firstItem="1XZ-xt-ToL" firstAttribute="top" secondItem="Y2A-hu-vdz" secondAttribute="bottom" id="Xoi-Zb-4ds"/>
+                            <constraint firstItem="Y2A-hu-vdz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d8A-S8-PsT"/>
                             <constraint firstItem="sd9-wO-hb4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jVn-6w-C3n"/>
-                            <constraint firstItem="1XZ-xt-ToL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vb5-5s-jpK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1XZ-xt-ToL" secondAttribute="bottom" constant="-35" id="zc5-eK-sdh"/>
+                            <constraint firstAttribute="bottom" secondItem="1XZ-xt-ToL" secondAttribute="bottom" id="yx6-9R-87U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mat-S4-qbi"/>
                     <connections>
                         <outlet property="activityIndicator" destination="sd9-wO-hb4" id="Y4n-t1-yZH"/>
+                        <outlet property="artistsSearchBar" destination="Y2A-hu-vdz" id="amy-AF-1Qz"/>
                         <outlet property="tableView" destination="1XZ-xt-ToL" id="mBO-yh-75t"/>
                     </connections>
                 </viewController>

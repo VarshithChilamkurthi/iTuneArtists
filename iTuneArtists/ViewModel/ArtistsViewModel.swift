@@ -11,8 +11,8 @@ class ArtistsViewModel {
     
     var artists: [Artists] = []
     
-    func fetchData(completion: @escaping () -> ()) {
-        APIManager.sharedInstance.getApiData(url: Constants.serverUrl.rawValue) { unwrappedDecodedData in
+    func fetchData(url: String, completion: @escaping () -> ()) {
+        APIManager.sharedInstance.getApiData(url: url) { unwrappedDecodedData in
             guard let data = unwrappedDecodedData else {
                 print(ServerErrors.invalidServerData.rawValue)
                 return

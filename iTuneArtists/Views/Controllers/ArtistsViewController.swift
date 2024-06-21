@@ -9,6 +9,7 @@ import UIKit
 
 class ArtistsViewController: UIViewController {
     
+    @IBOutlet var artistsSearchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
@@ -16,13 +17,12 @@ class ArtistsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchData()
         tableView.dataSource = self
         self.title = "Today's Hits"
     }
 }
 // MARK: - Table View
-extension ArtistsViewController: UITableViewDataSource {
+extension ArtistsViewController: UITableViewDataSource, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return artistsViewModelObj.artists.count
     }
@@ -32,11 +32,18 @@ extension ArtistsViewController: UITableViewDataSource {
         cell.setData(artists: artistsViewModelObj.artists[indexPath.row])
         return cell
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let searchedResult = searchBar.text {
+           let url = Constants.serverUrl.rawValue + searchedResult
+            fetchData(url: url)
+        }
+    }
 }
 // MARK: - Calling API & Reloading Table Data
 extension ArtistsViewController {
-    func fetchData() {
-        artistsViewModelObj.fetchData {
+    func fetchData(url: String) {
+        artistsViewModelObj.fetchData(url: url) {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
