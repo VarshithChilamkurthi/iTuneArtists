@@ -14,6 +14,7 @@ class ArtistsViewController: UIViewController {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     var artistsViewModelObj = ArtistsViewModel()
+    var mockArtistsViewModelObj = MockArtistsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +22,17 @@ class ArtistsViewController: UIViewController {
         self.title = "Today's Hits"
     }
 }
-// MARK: - Table View
+// MARK: - Table View Setup
 extension ArtistsViewController: UITableViewDataSource, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return artistsViewModelObj.artists.count
+//        return mockArtistsViewModelObj.artists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.ArtistsTableViewCell.rawValue) as! ArtistsTableViewCell
         cell.setData(artists: artistsViewModelObj.artists[indexPath.row])
+//        cell.setData(artists: mockArtistsViewModelObj.artists[indexPath.row])
         return cell
     }
     
@@ -37,6 +40,8 @@ extension ArtistsViewController: UITableViewDataSource, UISearchBarDelegate {
         if let searchedResult = searchBar.text {
            let url = Constants.serverUrl.rawValue + searchedResult
             fetchData(url: url)
+//            fetchMockData(url: "mockurl")
+            searchBar.resignFirstResponder()
         }
     }
 }
@@ -44,6 +49,15 @@ extension ArtistsViewController: UITableViewDataSource, UISearchBarDelegate {
 extension ArtistsViewController {
     func fetchData(url: String) {
         artistsViewModelObj.fetchData(url: url) {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    func fetchMockData(url: String) {
+        mockArtistsViewModelObj.fetchData(url: url) {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()

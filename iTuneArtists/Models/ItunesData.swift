@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Model: Codable {
+struct ArtistsModel: Codable {
     let resultCount: Int
     let results: [Artists]
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D2060A872C20BF1C00B9E3A7 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */; };
 		D2060A8F2C20CADB00B9E3A7 /* iTuneArtistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */; };
+		D27E87392C262E210096998F /* MockArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27E87382C262E210096998F /* MockArtistsViewModel.swift */; };
 		D2A1B2EF2C1A27760027090F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B2EE2C1A27760027090F /* AppDelegate.swift */; };
 		D2A1B2F12C1A27760027090F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B2F02C1A27760027090F /* SceneDelegate.swift */; };
 		D2A1B2F32C1A27760027090F /* ArtistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B2F22C1A27760027090F /* ArtistsViewController.swift */; };
@@ -40,6 +41,7 @@
 		D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		D2060A8C2C20CADB00B9E3A7 /* iTuneArtistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTuneArtistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTuneArtistsTests.swift; sourceTree = "<group>"; };
+		D27E87382C262E210096998F /* MockArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockArtistsViewModel.swift; sourceTree = "<group>"; };
 		D2A1B2EB2C1A27760027090F /* iTuneArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTuneArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A1B2EE2C1A27760027090F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2A1B2F02C1A27760027090F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */,
+				D27E87382C262E210096998F /* MockArtistsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			files = (
 				D2060A872C20BF1C00B9E3A7 /* ArtistsViewModel.swift in Sources */,
 				D2A1B2F32C1A27760027090F /* ArtistsViewController.swift in Sources */,
+				D27E87392C262E210096998F /* MockArtistsViewModel.swift in Sources */,
 				D2A1B3062C1A28160027090F /* ItunesData.swift in Sources */,
 				D2A1B2EF2C1A27760027090F /* AppDelegate.swift in Sources */,
 				D2A1B3382C20930A0027090F /* Protocols.swift in Sources */,

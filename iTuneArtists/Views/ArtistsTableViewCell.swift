@@ -27,10 +27,10 @@ class ArtistsTableViewCell: UITableViewCell {
         artistName.text = artists.artistName
         primaryGenre.text = artists.primaryGenreName
         price.text = String(artists.collectionPrice).priceFormatter()
-        APIManager.sharedInstance.getImageData(url: artists.artworkUrl60) { imageData in
-            if let unwrappedImageData = imageData {
+        APIManager.sharedInstance.getApiData(url: artists.artworkUrl60) { imageData in
+            if let imageData = imageData {
                 DispatchQueue.main.async {
-                    self.songImage.image = UIImage(data: unwrappedImageData)
+                    self.songImage.image = UIImage(data: imageData)
                 }
             }
         }
