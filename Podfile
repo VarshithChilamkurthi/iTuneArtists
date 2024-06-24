@@ -6,5 +6,4 @@ target 'iTuneArtists' do
   use_frameworks!
 
   # Pods for iTuneArtists
-  pod 'Alamofire'
 end
