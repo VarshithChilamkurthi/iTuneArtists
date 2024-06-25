@@ -9,6 +9,7 @@ import UIKit
 
 class ArtistsViewController: UIViewController {
     
+    @IBOutlet var onlineSegmentedControl: UISegmentedControl!
     @IBOutlet var artistsSearchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
@@ -20,27 +21,37 @@ class ArtistsViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         self.title = "Today's Hits"
+        activityIndicator.stopAnimating()
     }
 }
 // MARK: - Table View Setup
 extension ArtistsViewController: UITableViewDataSource, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return artistsViewModelObj.artists.count
-//        return mockArtistsViewModelObj.artists.count
+        if (onlineSegmentedControl.selectedSegmentIndex == 0) {
+            return artistsViewModelObj.artists.count
+        } else {
+            return mockArtistsViewModelObj.artists.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.ArtistsTableViewCell.rawValue) as! ArtistsTableViewCell
-        cell.setData(artists: artistsViewModelObj.artists[indexPath.row])
-//        cell.setData(artists: mockArtistsViewModelObj.artists[indexPath.row])
+        if (onlineSegmentedControl.selectedSegmentIndex == 0) {
+            cell.setData(artists: artistsViewModelObj.artists[indexPath.row])
+        } else {
+            cell.setData(artists: mockArtistsViewModelObj.artists[indexPath.row])
+        }
         return cell
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let searchedResult = searchBar.text {
-           let url = Constants.serverUrl.rawValue + searchedResult
-            fetchData(url: url)
-//            fetchMockData(url: "mockurl")
+            let url = Constants.serverUrl.rawValue + searchedResult
+            if (onlineSegmentedControl.selectedSegmentIndex == 0) {
+                fetchData(url: url)
+            } else {
+                fetchMockData(url: "mockurl")
+            }
             searchBar.resignFirstResponder()
         }
     }
@@ -48,8 +59,13 @@ extension ArtistsViewController: UITableViewDataSource, UISearchBarDelegate {
 // MARK: - Calling API & Reloading Table Data
 extension ArtistsViewController {
     func fetchData(url: String) {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+        
         artistsViewModelObj.fetchData(url: url) {
             DispatchQueue.main.async {
+                self.activityIndicator.startAnimating()
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
             }
@@ -57,8 +73,13 @@ extension ArtistsViewController {
     }
     
     func fetchMockData(url: String) {
+        DispatchQueue.main.async {
+            self.activityIndicator.startAnimating()
+        }
+        
         mockArtistsViewModelObj.fetchData(url: url) {
             DispatchQueue.main.async {
+                self.activityIndicator.startAnimating()
                 self.tableView.reloadData()
                 self.activityIndicator.stopAnimating()
             }

@@ -9,8 +9,8 @@ import Foundation
 
 class MockArtistsViewModel: ArtistsViewModel {
     override func fetchData(url: String, completion: @escaping () -> ()) {
-        self.artists = [Artists(artistName: "Varshith", country: "USA", primaryGenreName: "Pop", collectionPrice: 0.0, artworkUrl60: "none"),
-                        Artists(artistName: "abc", country: "abc", primaryGenreName: "abc", collectionPrice: 0.0, artworkUrl60: "none")]
+        self.artists = [Artists(artistName: "Varshith", country: "USA", primaryGenreName: "Pop", collectionPrice: 0.0, artworkUrl60: "music.note.list"),
+                        Artists(artistName: "abc", country: "abc", primaryGenreName: "abc", collectionPrice: 0.0, artworkUrl60: "music.note.list")]
         completion()
     }
 }

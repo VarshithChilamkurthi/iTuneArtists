@@ -17,15 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-FW-nCj">
+                                <rect key="frame" x="16" y="103" width="361" height="31"/>
+                                <segments>
+                                    <segment title="Online"/>
+                                    <segment title="Offline"/>
+                                </segments>
+                            </segmentedControl>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-hu-vdz">
-                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <rect key="frame" x="0.0" y="133" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="w6o-hK-r1j"/>
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1XZ-xt-ToL">
-                                <rect key="frame" x="0.0" y="159" width="393" height="693"/>
+                                <rect key="frame" x="0.0" y="189" width="393" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ArtistsTableViewCell" rowHeight="80" id="eRq-nr-U6V" customClass="ArtistsTableViewCell" customModule="iTuneArtists" customModuleProvider="target">
@@ -99,11 +106,15 @@
                         <constraints>
                             <constraint firstItem="1XZ-xt-ToL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="11u-I6-YGn"/>
                             <constraint firstItem="sd9-wO-hb4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="57I-l2-sIE"/>
-                            <constraint firstItem="Y2A-hu-vdz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FBb-i2-2zK"/>
+                            <constraint firstItem="Y2A-hu-vdz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="FBb-i2-2zK"/>
+                            <constraint firstItem="Y2A-hu-vdz" firstAttribute="top" secondItem="gUw-FW-nCj" secondAttribute="bottom" id="HdJ-K8-OZB"/>
                             <constraint firstItem="Y2A-hu-vdz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J8d-Il-tMT"/>
+                            <constraint firstItem="gUw-FW-nCj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="USn-S5-wOA"/>
                             <constraint firstItem="1XZ-xt-ToL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VcR-x6-iFJ"/>
                             <constraint firstItem="1XZ-xt-ToL" firstAttribute="top" secondItem="Y2A-hu-vdz" secondAttribute="bottom" id="Xoi-Zb-4ds"/>
+                            <constraint firstItem="gUw-FW-nCj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zma-jZ-Irm"/>
                             <constraint firstItem="Y2A-hu-vdz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d8A-S8-PsT"/>
+                            <constraint firstItem="gUw-FW-nCj" firstAttribute="centerX" secondItem="Y2A-hu-vdz" secondAttribute="centerX" id="icV-YN-9G3"/>
                             <constraint firstItem="sd9-wO-hb4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jVn-6w-C3n"/>
                             <constraint firstAttribute="bottom" secondItem="1XZ-xt-ToL" secondAttribute="bottom" id="yx6-9R-87U"/>
                         </constraints>
@@ -112,6 +123,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="sd9-wO-hb4" id="Y4n-t1-yZH"/>
                         <outlet property="artistsSearchBar" destination="Y2A-hu-vdz" id="amy-AF-1Qz"/>
+                        <outlet property="onlineSegmentedControl" destination="gUw-FW-nCj" id="8Sn-pN-iek"/>
                         <outlet property="tableView" destination="1XZ-xt-ToL" id="mBO-yh-75t"/>
                     </connections>
                 </viewController>
