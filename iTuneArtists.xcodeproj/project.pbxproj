@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A96A0033AB76FD93DB9B83B /* Pods_iTuneArtists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7737E7D7BB64DE65C33EBF /* Pods_iTuneArtists.framework */; };
 		D2060A872C20BF1C00B9E3A7 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */; };
 		D2060A8F2C20CADB00B9E3A7 /* iTuneArtistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */; };
 		D24EE7482C2A19680081F4B8 /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EE7472C2A19680081F4B8 /* MockApiManager.swift */; };
@@ -36,10 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E7737E7D7BB64DE65C33EBF /* Pods_iTuneArtists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTuneArtists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4728ED55FBB77B4E6F6509A /* Pods-iTuneArtists.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTuneArtists.debug.xcconfig"; path = "Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists.debug.xcconfig"; sourceTree = "<group>"; };
 		D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		D2060A8C2C20CADB00B9E3A7 /* iTuneArtistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTuneArtistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTuneArtistsTests.swift; sourceTree = "<group>"; };
 		D24EE7472C2A19680081F4B8 /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
+		D250B4002C2C796C00D964A7 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../algorithms/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D27E87382C262E210096998F /* MockArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockArtistsViewModel.swift; sourceTree = "<group>"; };
 		D2A1B2EB2C1A27760027090F /* iTuneArtists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTuneArtists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A1B2EE2C1A27760027090F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		D2A1B30D2C1A34F60027090F /* ArtistsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsTableViewCell.swift; sourceTree = "<group>"; };
 		D2A1B30F2C1B5E700027090F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2A1B3372C20930A0027090F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		E115DA3694B12B0035B06FE1 /* Pods-iTuneArtists.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTuneArtists.release.xcconfig"; path = "Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +74,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A96A0033AB76FD93DB9B83B /* Pods_iTuneArtists.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62D70A3BF87910955BD73DEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E7737E7D7BB64DE65C33EBF /* Pods_iTuneArtists.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D2060A852C20BEDA00B9E3A7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */,
+				D250B4002C2C796C00D964A7 /* MyPlayground.playground */,
 			);
 			path = iTuneArtistsTests;
 			sourceTree = "<group>";
@@ -99,6 +114,7 @@
 				D2060A8D2C20CADB00B9E3A7 /* iTuneArtistsTests */,
 				D2A1B2EC2C1A27760027090F /* Products */,
 				DC74D6557998C2B37718BB87 /* Pods */,
+				62D70A3BF87910955BD73DEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +192,8 @@
 		DC74D6557998C2B37718BB87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				C4728ED55FBB77B4E6F6509A /* Pods-iTuneArtists.debug.xcconfig */,
+				E115DA3694B12B0035B06FE1 /* Pods-iTuneArtists.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -205,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D2A1B2FF2C1A27780027090F /* Build configuration list for PBXNativeTarget "iTuneArtists" */;
 			buildPhases = (
+				F0AF3DF20412ABAC4F1DE7BB /* [CP] Check Pods Manifest.lock */,
 				D2A1B2E72C1A27760027090F /* Sources */,
 				D2A1B2E82C1A27760027090F /* Frameworks */,
 				D2A1B2E92C1A27760027090F /* Resources */,
+				5D5AC7BB92A6D4887CAEBD13 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +266,9 @@
 				Base,
 			);
 			mainGroup = D2A1B2E22C1A27760027090F;
+			packageReferences = (
+				D2A6EBE22C2F28E600A6847B /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = D2A1B2EC2C1A27760027090F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -275,6 +298,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D5AC7BB92A6D4887CAEBD13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iTuneArtists/Pods-iTuneArtists-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0AF3DF20412ABAC4F1DE7BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iTuneArtists-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2060A882C20CADB00B9E3A7 /* Sources */ = {
@@ -491,6 +556,7 @@
 		};
 		D2A1B3002C1A27780027090F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4728ED55FBB77B4E6F6509A /* Pods-iTuneArtists.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,6 +585,7 @@
 		};
 		D2A1B3012C1A27780027090F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E115DA3694B12B0035B06FE1 /* Pods-iTuneArtists.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,6 +643,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D2A6EBE22C2F28E600A6847B /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = D2A1B2E32C1A27760027090F /* Project object */;
 }

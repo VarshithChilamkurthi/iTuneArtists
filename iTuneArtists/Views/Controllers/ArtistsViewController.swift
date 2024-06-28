@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class ArtistsViewController: UIViewController {
     
@@ -16,12 +17,14 @@ class ArtistsViewController: UIViewController {
 
     var artistsViewModelObj = ArtistsViewModel()
     var mockArtistsViewModelObj = MockArtistsViewModel()
+    var hud: MBProgressHUD!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         self.title = "Today's Hits"
         activityIndicator.stopAnimating()
+//        self.hud.hide(animated: true)
     }
 }
 // MARK: - Table View Setup
@@ -60,14 +63,18 @@ extension ArtistsViewController: UITableViewDataSource, UISearchBarDelegate {
 extension ArtistsViewController {
     func fetchData(url: String) {
         DispatchQueue.main.async {
-            self.activityIndicator.startAnimating()
+//            self.activityIndicator.startAnimating()
+            self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         }
         
         artistsViewModelObj.fetchData(url: url) {
             DispatchQueue.main.async {
-                self.activityIndicator.startAnimating()
+//                self.activityIndicator.startAnimating()
+//                self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+                self.hud.animationType = .fade
                 self.tableView.reloadData()
-                self.activityIndicator.stopAnimating()
+//                self.activityIndicator.stopAnimating()
+                self.hud.hide(animated: true)
             }
         }
     }
@@ -79,9 +86,12 @@ extension ArtistsViewController {
         
         mockArtistsViewModelObj.fetchData(url: url) {
             DispatchQueue.main.async {
-                self.activityIndicator.startAnimating()
+//                self.activityIndicator.startAnimating()
+//                self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+                self.hud.animationType = .fade
                 self.tableView.reloadData()
-                self.activityIndicator.stopAnimating()
+//                self.activityIndicator.stopAnimating()
+                self.hud.hide(animated: true)
             }
         }
     }
