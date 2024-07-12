@@ -10,6 +10,7 @@
 		7A96A0033AB76FD93DB9B83B /* Pods_iTuneArtists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7737E7D7BB64DE65C33EBF /* Pods_iTuneArtists.framework */; };
 		D2060A872C20BF1C00B9E3A7 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */; };
 		D2060A8F2C20CADB00B9E3A7 /* iTuneArtistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */; };
+		D224167B2C411287004C6429 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D224167A2C411287004C6429 /* ImageProvider.swift */; };
 		D24EE7482C2A19680081F4B8 /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24EE7472C2A19680081F4B8 /* MockApiManager.swift */; };
 		D27E87392C262E210096998F /* MockArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27E87382C262E210096998F /* MockArtistsViewModel.swift */; };
 		D2A1B2EF2C1A27760027090F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1B2EE2C1A27760027090F /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 		D2060A862C20BF1C00B9E3A7 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		D2060A8C2C20CADB00B9E3A7 /* iTuneArtistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iTuneArtistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2060A8E2C20CADB00B9E3A7 /* iTuneArtistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTuneArtistsTests.swift; sourceTree = "<group>"; };
+		D224167A2C411287004C6429 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 		D24EE7472C2A19680081F4B8 /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
 		D250B4002C2C796C00D964A7 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = ../../algorithms/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D27E87382C262E210096998F /* MockArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockArtistsViewModel.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				D2A1B3082C1A29070027090F /* ApiManager.swift */,
 				D24EE7472C2A19680081F4B8 /* MockApiManager.swift */,
+				D224167A2C411287004C6429 /* ImageProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				D2A1B30E2C1A34F60027090F /* ArtistsTableViewCell.swift in Sources */,
 				D2A1B3092C1A29070027090F /* ApiManager.swift in Sources */,
 				D2A1B2F12C1A27760027090F /* SceneDelegate.swift in Sources */,
+				D224167B2C411287004C6429 /* ImageProvider.swift in Sources */,
 				D2A1B30C2C1A29EE0027090F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

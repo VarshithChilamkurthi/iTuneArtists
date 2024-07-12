@@ -27,13 +27,14 @@ class ArtistsTableViewCell: UITableViewCell {
         artistName.text = artists.artistName
         primaryGenre.text = artists.primaryGenreName
         price.text = String(artists.collectionPrice).priceFormatter()
-        APIManager.sharedInstance.getApiData(url: artists.artworkUrl60) { imageData in
-            if let imageData = imageData {
+        ImageProvider.shared.fetchImage(url: artists.artworkUrl60) { [weak self] image in
+            if let image = image {
                 DispatchQueue.main.async {
-                    self.songImage.image = UIImage(data: imageData)
+                    self?.songImage.image = image
                 }
             }
         }
+        
         // MARK: one way of converting image url to data
 //        //converting image url to data and setting the image
 //        guard let imageUrl = URL(string: artists.artworkUrl60) else { return }

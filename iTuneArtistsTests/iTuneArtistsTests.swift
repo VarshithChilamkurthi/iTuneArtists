@@ -42,13 +42,6 @@ final class iTuneArtistsTests: XCTestCase {
         XCTAssertNil(result)
     }
     
-//    func testFetchDataInvalidData() throws {
-//        mockArtistsViewModelObj?.fetchData(url: "invalidUrl") {
-//            apiManagerObj?.getApiData(url: "url") { Data() in }
-//        }
-////        XCTAssertNil(result)
-//    }
-    
     func testFetchDataMock() throws {
         mockArtistsViewModelObj?.fetchData(url: "none") {}
         XCTAssertEqual(mockArtistsViewModelObj?.artists.count, 2)

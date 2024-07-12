@@ -24,7 +24,6 @@ class ArtistsViewController: UIViewController {
         tableView.dataSource = self
         self.title = "Today's Hits"
         activityIndicator.stopAnimating()
-//        self.hud.hide(animated: true)
     }
 }
 // MARK: - Table View Setup
@@ -63,17 +62,13 @@ extension ArtistsViewController: UITableViewDataSource, UISearchBarDelegate {
 extension ArtistsViewController {
     func fetchData(url: String) {
         DispatchQueue.main.async {
-//            self.activityIndicator.startAnimating()
             self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         }
         
         artistsViewModelObj.fetchData(url: url) {
             DispatchQueue.main.async {
-//                self.activityIndicator.startAnimating()
-//                self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 self.hud.animationType = .fade
                 self.tableView.reloadData()
-//                self.activityIndicator.stopAnimating()
                 self.hud.hide(animated: true)
             }
         }
@@ -81,16 +76,13 @@ extension ArtistsViewController {
     
     func fetchMockData(url: String) {
         DispatchQueue.main.async {
-            self.activityIndicator.startAnimating()
+            self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         }
         
         mockArtistsViewModelObj.fetchData(url: url) {
             DispatchQueue.main.async {
-//                self.activityIndicator.startAnimating()
-//                self.hud = MBProgressHUD.showAdded(to: self.view, animated: true)
                 self.hud.animationType = .fade
                 self.tableView.reloadData()
-//                self.activityIndicator.stopAnimating()
                 self.hud.hide(animated: true)
             }
         }
